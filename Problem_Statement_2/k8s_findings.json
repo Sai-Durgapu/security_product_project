@@ -1,0 +1,43 @@
+{
+    "scan_metadata": {
+      "scan_id": "12345",
+      "timestamp": "2025-04-29T12:00:00Z",
+      "scanner": "KubeScan",
+      "k8s_version": "1.27.0",
+      "cluster_name": "production-cluster"
+    },
+    "findings": [
+      {
+        "type": "vulnerability",
+        "severity": "critical",
+        "description": "Container running with root privileges",
+        "resource": {
+          "namespace": "default",
+          "pod": "nginx-pod",
+          "container": "nginx"
+        },
+        "recommendation": "Update securityContext to run as non-root user."
+      },
+      {
+        "type": "misconfiguration",
+        "severity": "high",
+        "description": "Kubernetes Dashboard exposed without authentication",
+        "resource": {
+          "namespace": "kube-system",
+          "service": "kubernetes-dashboard"
+        },
+        "recommendation": "Enable RBAC authentication and restrict external access."
+      },
+      {
+        "type": "compliance",
+        "severity": "medium",
+        "description": "Pod without CPU/memory limits",
+        "resource": {
+          "namespace": "dev",
+          "pod": "test-app"
+        },
+        "recommendation": "Define resource requests and limits in pod specifications."
+      }
+    ]
+  }
+  
