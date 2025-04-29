@@ -1,0 +1,26 @@
+ContainerSafe Scanner PRD
+
+Overview
+- Product: ContainerSafe Scanner
+- Helps find security issues in container images
+- For developers
+
+Problem
+- Many images have security issues
+- Need to find serious ones to fix
+
+Features
+- Dashboard: Shows table (Image, Tag, Total Issues, Critical, High, Medium, Low)
+- Example: nginx:latest | 15 issues | 2 Critical | 5 High | 8 Medium | 0 Low
+- Filter: By Critical or High issues
+- Search: By image name
+- Details: Shows Issue ID, Part, Fix (e.g., CVE-2023-1234 | libcurl | Update libcurl)
+- Export: Save as CSV
+
+Requirements
+- Fast: Loads in 2 seconds
+- Needs login
+
+Success
+- Find issues in 1 minute
+- Easy to use
